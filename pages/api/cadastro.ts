@@ -3,8 +3,6 @@ import type {RespostaPadraoMsg} from '../../types/RespostaPadraoMsg';
 import type {CadastroRequisicao} from '../../types/CadastroRequisicao';
 import {UsuarioModel} from '../../models/UsuarioModel';
 import {conectarMongoDB} from '../../middlewares/conectarMongoDB'
-
-
 import md5 from 'md5';
 
 const endpointCadastro = 
@@ -35,7 +33,7 @@ const endpointCadastro =
 
         // salvar no banco de dados
         const usuarioASerSalvo = {
-            nome: usuario.nome,
+            nome : usuario.nome,
             email : usuario.email,
             senha : md5(usuario.senha)
         }
